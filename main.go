@@ -39,7 +39,6 @@ func main() {
 
 func messageWithStartingID(id int) func(message string) []byte {
 	return func(message string) []byte {
-		id = id + 1
 		msg := pb.Message{
 			Id:        int32(id),
 			Text:      message,
@@ -50,6 +49,8 @@ func messageWithStartingID(id int) func(message string) []byte {
 		if err != nil {
 			log.Fatal("failed to marshal proto message:", err)
 		}
+
+		id = id + 1
 
 		return bytes
 	}
