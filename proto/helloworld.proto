@@ -1,0 +1,12 @@
+syntax = "proto3";
+package kafka_sandbox;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "proto/out";
+
+message Message {
+  int32 id = 1;
+  string text = 2;
+  google.protobuf.Timestamp createdAt = 3;
+}
