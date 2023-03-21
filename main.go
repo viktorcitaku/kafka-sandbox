@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/segmentio/kafka-go"
-	pb "github.com/viktorcitaku/kafka-sandbox/proto/out"
+	pb "github.com/viktorcitaku/kafka-sandbox/proto/v1"
 	"google.golang.org/protobuf/proto"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 )
